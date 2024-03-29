@@ -63,6 +63,22 @@ public class GetInTouch {
         Thread.sleep(5000);
 
         /// here we have to verify captcha is pending
+        // Math Captcha value
+        // Find the element that contains the CAPTCHA mathematical expression
+        WebElement captchaElement1 = driver.findElement(By.id("dyn_num1"));
+        WebElement captchaElement2 = driver.findElement(By.id("dyn_num2"));
+
+        // Get the text of the CAPTCHA mathematical expression
+        String captchaText1 = captchaElement1.getText();
+        String captchaText2 = captchaElement2.getText();
+
+        // Solve the CAPTCHA mathematical expression
+        int result = solveCaptcha(captchaText1,captchaText2);
+        // Find the input field for the CAPTCHA solution
+        WebElement captchaInput = driver.findElement(By.id("capt"));
+        // Enter the solution into the input field
+        captchaInput.sendKeys(String.valueOf(result));
+
 
         System.out.println("Click On submit Button");
         driver.findElement(By.xpath("/html/body/div[5]/div/div/div/div[2]/div/form/div[7]/div/button")).click();
@@ -79,4 +95,24 @@ public class GetInTouch {
         driver.quit();
 
     }
+    private static int solveCaptcha(String captchaText1,String captchaText2) {
+        // Split the captcha text to separate the operands and operator
+//        String[] parts = captchaText.split(" ");
+        String onlyNumber = captchaText2.replaceAll("[^0-9]", "");
+        int operand1 = Integer.parseInt(captchaText1);
+        int operand2 = Integer.parseInt(onlyNumber);
+//        char operator = parts[1].charAt(0);
+       char operator = '+';
+
+        // Perform the arithmetic operation based on the operator
+        return switch (operator) {
+            case '+' -> operand1 + operand2;
+            case '-' -> operand1 - operand2;
+            case '*' -> operand1 * operand2;
+            case '/' -> operand1 / operand2;
+            default -> throw new IllegalArgumentException("Invalid operator: " + operator);
+        };
+    }
+
 }
+

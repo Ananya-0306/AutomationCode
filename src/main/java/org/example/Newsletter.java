@@ -40,7 +40,7 @@ public class Newsletter {
         Thread.sleep(7000);
 
         System.out.println("Enter your valid email Id to subscribe our newsletter");
-        emailInput.sendKeys("sundew2024happynewyeartest@ananyatest.com");
+        emailInput.sendKeys("test@example.com");
         Thread.sleep(5000);
 
         emailInput.sendKeys(Keys.ENTER);

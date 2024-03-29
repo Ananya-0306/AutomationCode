@@ -1,5 +1,5 @@
 package org.example;
-
+//prepared by Ananya Chatterjee
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
