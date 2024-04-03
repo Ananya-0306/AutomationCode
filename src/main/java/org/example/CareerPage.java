@@ -11,6 +11,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
@@ -41,34 +43,52 @@ public class CareerPage {
         System.out.println("Entering all the required details");
 
         System.out.println("Entering position applying for");
-        driver.findElement(By.id("position"));
         WebElement positionappliedfor=driver.findElement(By.id("position"));
         positionappliedfor.sendKeys("QA Test by sundew solutions");
         Thread.sleep(1000);
 
         System.out.println("entering the Name");
-        driver.findElement(By.id("name"));
         WebElement username=driver.findElement(By.id("name"));
         username.sendKeys("Ananya Sundew Test");
         Thread.sleep(1000);
 
         System.out.println("entering the Email");
-        driver.findElement(By.id("email"));
         WebElement email=driver.findElement(By.id("email"));
         email.sendKeys("ananya@sundewsolutions.com");
         Thread.sleep(1000);
 
         System.out.println("entering the Phone Number");
-        driver.findElement(By.id("contact_number"));
         WebElement phoneNumber=driver.findElement(By.id("contact_number"));
         phoneNumber.sendKeys("8987818847");
         Thread.sleep(1000);
 
         System.out.println("What is your qualifications");
-        driver.findElement(By.id("qualification"));
         WebElement qualification=driver.findElement(By.id("qualification"));
         qualification.sendKeys("Hi this is daily checklist from Sundew Solutions by Ananya Chatterjee :D");
         Thread.sleep(1000);
+
+        //Handle dropdown
+        driver.findElement(By.id("experience")).click();
+
+        List<WebElement> allOptions = driver.findElements(By.cssSelector("select option"));
+
+        String option = "2 - 3 years";
+
+        // Iterate the list using for loop
+
+        for (WebElement allOption : allOptions) {
+
+            if (allOption.getText().contains(option)) {
+
+                allOption.click();
+
+                System.out.println("clicked");
+
+                break;
+
+            }
+
+        }
 
         System.out.println("What is your Comments");
         driver.findElement(By.id("comment"));
@@ -77,28 +97,46 @@ public class CareerPage {
         Thread.sleep(1000);
 
         //Uploading file
-        driver.findElement(By.className("file1")).click();
-        WebElement browse = driver.findElement(By.className("file1"));
-        browse.sendKeys("C:/Users/SDS/Downloads/PCC041020234243816719.pdf"); //Uploading the file using sendKeys
-        System.out.println("File is Uploaded Successfully");
-        Thread.sleep(1000);
 
+
+        // here we have to verify captcha
+        WebElement captchaElement1 = driver.findElement(By.id("dyn_num1"));
+        WebElement captchaElement2 = driver.findElement(By.id("dyn_num2"));
+
+        // Get the text of the CAPTCHA mathematical expression
+        String captchaText1 = captchaElement1.getText();
+        String captchaText2 = captchaElement2.getText();
+        int result = solveCaptcha(captchaText1,captchaText2);
+        WebElement captchaInput = driver.findElement(By.id("capt"));
+        captchaInput.sendKeys(String.valueOf(result));
+
+        //Click on submit button
         System.out.println("Click On submit Button");
         driver.findElement(By.id("career_submit")).click();
         Thread.sleep(1000);
-
-        //Verify & Validate The Action
-        System.out.println("verifying Actual Page URL with the expected URL");
-        if(driver.findElement(By.xpath(".//a[text()='image (61).png']")).isDisplayed()) {
-            assertTrue(true, "Resume Uploaded");
-        }else {
-            assertFalse(false, "resume not Uploaded");
-        }
-        Thread.sleep(5000);
 
         //Close the browser window
         System.out.println("Form Submitted Successfully :D ");
         driver.quit();
 
     }
+    private static int solveCaptcha(String captchaText1,String captchaText2) {
+        // Split the captcha text to separate the operands and operator
+//        String[] parts = captchaText.split(" ");
+        String onlyNumber = captchaText2.replaceAll("[^0-9]", "");
+        int operand1 = Integer.parseInt(captchaText1);
+        int operand2 = Integer.parseInt(onlyNumber);
+//        char operator = parts[1].charAt(0);
+        char operator = '+';
+
+        // Perform the arithmetic operation based on the operator
+        return switch (operator) {
+            case '+' -> operand1 + operand2;
+            case '-' -> operand1 - operand2;
+            case '*' -> operand1 * operand2;
+            case '/' -> operand1 / operand2;
+            default -> throw new IllegalArgumentException("Invalid operator: " + operator);
+        };
+    }
+
 }

@@ -62,7 +62,7 @@ public class GetInTouch {
         message.sendKeys("Hi this is daily checklist from Sundew Solutions by Ananya Chatterjee :D");
         Thread.sleep(5000);
 
-        /// here we have to verify captcha is pending
+        /// here we have to verify captcha
         // Math Captcha value
         // Find the element that contains the CAPTCHA mathematical expression
         WebElement captchaElement1 = driver.findElement(By.id("dyn_num1"));
