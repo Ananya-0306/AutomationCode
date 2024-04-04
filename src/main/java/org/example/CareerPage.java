@@ -1,16 +1,16 @@
 package org.example;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.ISelect;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
 import java.util.List;
 
 import static org.testng.Assert.assertFalse;
@@ -97,6 +97,9 @@ public class CareerPage {
         Thread.sleep(1000);
 
         //Uploading file
+//        WebElement element = driver.findElement(By.className("selectedvalue"));
+        //element.sendKeys("C://Users//USER//Downloads//IITK Security Testing.pdf");
+        driver.findElement(By.id("resume")).sendKeys("C://Users//USER//Downloads//IITK Security Testing.pdf");
 
 
         // here we have to verify captcha
@@ -113,6 +116,7 @@ public class CareerPage {
         //Click on submit button
         System.out.println("Click On submit Button");
         driver.findElement(By.id("career_submit")).click();
+
         Thread.sleep(1000);
 
         //Close the browser window

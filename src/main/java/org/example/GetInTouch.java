@@ -1,8 +1,5 @@
 package org.example;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -80,8 +77,12 @@ public class GetInTouch {
         captchaInput.sendKeys(String.valueOf(result));
 
 
-        System.out.println("Click On submit Button");
-        driver.findElement(By.xpath("/html/body/div[5]/div/div/div/div[2]/div/form/div[7]/div/button")).click();
+//        System.out.println("Click On submit Button");
+//        driver.findElement(By.xpath("/html/body/div[5]/div/div/div/div[2]/div/form/div[7]/div/button")).click();
+
+        WebElement element = driver.findElement(By.xpath("/html/body/div[5]/div/div/div/div[2]/div/form/div[7]/div/button"));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+        element.click();
 
         //Verify & Validate The Action
         System.out.println("verifying Actual Page URL with the expected URL");
