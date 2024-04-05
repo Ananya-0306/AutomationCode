@@ -47,7 +47,6 @@ public class Login {
         driver.findElement(By.id("login_btn")).click();
 
 //Verify & Validate The Action
-
         System.out.println("verifying Login Credentials");
         String actualURL = "https://pcchandraindia.com/";
         String expectedURL = driver.getCurrentUrl(); // It will fetch the current URL
@@ -55,16 +54,12 @@ public class Login {
         Thread.sleep(5000);
 
 // Locating the element
-
         WebElement e = driver.findElement(By.xpath("/html/body/header/div[1]/div/div/div[2]/ul/li[4]/div/span[1]/span"));
 
-
 //using getText method the retrieve the text of the element
-
         System.out.println(e.getText());
 
 //Close the browser window
-
         System.out.println("Loggedin Sucessfully :) ");
         driver.quit();
 
