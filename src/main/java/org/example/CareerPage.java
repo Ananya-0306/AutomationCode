@@ -115,9 +115,11 @@ public class CareerPage {
 
         //Click on submit button
         System.out.println("Click On submit Button");
-        driver.findElement(By.id("career_submit")).click();
+//        driver.findElement(By.id("career_submit")).click();
 
-        Thread.sleep(1000);
+        Thread.sleep(1000); // Add a delay of 1 second before retrying
+        driver.findElement(By.id("career_submit")).click();
+        //Thread.sleep(9000);
 
         //Close the browser window
         System.out.println("Form Submitted Successfully :D ");
