@@ -76,7 +76,7 @@ public class GetInTouch {
         // Enter the solution into the input field
         captchaInput.sendKeys(String.valueOf(result));
 
-        Thread.sleep(2000); // Add a delay of 1 second before retrying
+        Thread.sleep(3000); // Add a delay of 1 second before retrying
         driver.findElement(By.xpath("/html/body/div[5]/div/div/div/div[2]/div/form/div[7]/div/button")).click();
        // ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         //element.click();

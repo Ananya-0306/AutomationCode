@@ -25,38 +25,91 @@ td,th {border:1px solid #009;padding:.25em .5em}
 <body>
 <table cellspacing="0" cellpadding="0" class="testOverview">
 <tr><th>Test</th><th>Methods<br/>Passed</th><th>Scenarios<br/>Passed</th><th># skipped</th><th># failed</th><th>Total<br/>Time</th><th>Included<br/>Groups</th><th>Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em"><a href="#t1">AutomationCode</a></td><td class="numi">9</td><td class="numi">9</td><td class="numi">0</td><td class="numi">0</td><td class="numi">244.3 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t1">AutomationCode</a></td><td class="numi">7</td><td class="numi">7</td><td class="numi">0</td><td class="numi_attn">2</td><td class="numi">257.2 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="methodOverview" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr id="t1"><th colspan="5">AutomationCode &#8212; passed</th></tr>
-<tr class="passedodd"><td>org.example.Newsletter</td><td><a href="#m1"><b>testNewsletterFormSubmission</b>  </a></td><td class="numi">1</td><td>1712294357859</td><td class="numi">28964</td></tr>
-<tr class="passedeven"><td>org.example.Login</td><td><a href="#m2"><b>testLogin</b>  </a></td><td class="numi">1</td><td>1712294388886</td><td class="numi">25154</td></tr>
-<tr class="passedodd"><td>org.example.GetInTouch</td><td><a href="#m3"><b>testLogin</b>  </a></td><td class="numi">1</td><td>1712294215839</td><td class="numi">51978</td></tr>
-<tr class="passedeven"><td>org.example.CorporateGiftPage</td><td><a href="#m4"><b>testLogin</b>  </a></td><td class="numi">1</td><td>1712294297478</td><td class="numi">8452</td></tr>
-<tr class="passedodd"><td>org.example.AddToCart</td><td><a href="#m5"><b>testNewsletterFormSubmission</b>  </a></td><td class="numi">1</td><td>1712294269898</td><td class="numi">25576</td></tr>
-<tr class="passedeven"><td>org.example.CSRActivitiesPage</td><td><a href="#m6"><b>testLogin</b>  </a></td><td class="numi">1</td><td>1712294199993</td><td class="numi">13804</td></tr>
-<tr class="passedodd"><td>org.example.WishListProducts</td><td><a href="#m7"><b>testNewsletterFormSubmission</b>  </a></td><td class="numi">1</td><td>1712294415947</td><td class="numi">25169</td></tr>
-<tr class="passedeven"><td>org.example.CareerPage</td><td><a href="#m8"><b>testLogin</b>  </a></td><td class="numi">1</td><td>1712294307895</td><td class="numi">20374</td></tr>
-<tr class="passedodd"><td>org.example.SearchProducts</td><td><a href="#m9"><b>testNewsletterFormSubmission</b>  </a></td><td class="numi">1</td><td>1712294330362</td><td class="numi">24733</td></tr>
+<tr id="t1"><th colspan="5">AutomationCode &#8212; failed</th></tr>
+<tr class="failedodd"><td>org.example.SearchProducts</td><td><a href="#m1"><b>testNewsletterFormSubmission</b>  </a></td><td class="numi">1</td><td>1713326843579</td><td class="numi">19835</td></tr>
+<tr class="failedeven"><td>org.example.GetInTouch</td><td><a href="#m2"><b>testLogin</b>  </a></td><td class="numi">1</td><td>1713327047406</td><td class="numi">48983</td></tr>
+<tr><th colspan="5">AutomationCode &#8212; passed</th></tr>
+<tr class="passedodd"><td>org.example.CorporateGiftPage</td><td><a href="#m3"><b>testLogin</b>  </a></td><td class="numi">1</td><td>1713326951987</td><td class="numi">10489</td></tr>
+<tr class="passedeven"><td>org.example.WishListProducts</td><td><a href="#m4"><b>testNewsletterFormSubmission</b>  </a></td><td class="numi">1</td><td>1713327017501</td><td class="numi">27366</td></tr>
+<tr class="passedodd"><td>org.example.Login</td><td><a href="#m5"><b>testLogin</b>  </a></td><td class="numi">1</td><td>1713326896788</td><td class="numi">27821</td></tr>
+<tr class="passedeven"><td>org.example.Newsletter</td><td><a href="#m6"><b>testNewsletterFormSubmission</b>  </a></td><td class="numi">1</td><td>1713326984619</td><td class="numi">29753</td></tr>
+<tr class="passedodd"><td>org.example.CareerPage</td><td><a href="#m7"><b>testLogin</b>  </a></td><td class="numi">1</td><td>1713326927487</td><td class="numi">21662</td></tr>
+<tr class="passedeven"><td>org.example.AddToCart</td><td><a href="#m8"><b>testNewsletterFormSubmission</b>  </a></td><td class="numi">1</td><td>1713326867713</td><td class="numi">26302</td></tr>
+<tr class="passedodd"><td>org.example.CSRActivitiesPage</td><td><a href="#m9"><b>testLogin</b>  </a></td><td class="numi">1</td><td>1713326965087</td><td class="numi">17006</td></tr>
 </table>
 <h1>AutomationCode</h1>
-<h2 id="m1">org.example.Newsletter:testNewsletterFormSubmission</h2>
+<h2 id="m1">org.example.SearchProducts:testNewsletterFormSubmission</h2>
+<div>
+<div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;product_top&apos;]//div[@class=&apos;wishlist&apos;]&quot;}
+  (Session info: chrome=123.0.6312.124)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [34d3e0691880bcedd7a77308cb29a4dc, findElement {using=xpath, value=//div[@class=&apos;product_top&apos;]//div[@class=&apos;wishlist&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.124, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\USER\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60390}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60390/devtoo..., se:cdpVersion: 123.0.6312.124, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 34d3e0691880bcedd7a77308cb29a4dc
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at org.example.SearchProducts.testNewsletterFormSubmission(SearchProducts.java:54)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 25 stack frames</div>
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">org.example.Login:testLogin</h2>
+<h2 id="m2">org.example.GetInTouch:testLogin</h2>
+<div>
+<div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (1298, 740)
+  (Session info: chrome=123.0.6312.124)
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fd66462e00bf801038abfb9ec4be76a7, clickElement {id=f.E8BD7E6D80B0038593A1B46E9B4BD191.d.4198F52C2BCF50DCDA680A9EDD303DC3.e.484}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.124, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\USER\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60840}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60840/devtoo..., se:cdpVersion: 123.0.6312.124, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (fd66462e00bf801038abfb9ec4be76a7)] -&gt; xpath: /html/body/div[5]/div/div/div/div[2]/div/form/div[7]/div/button]
+Session ID: fd66462e00bf801038abfb9ec4be76a7
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at org.example.GetInTouch.testLogin(GetInTouch.java:80)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 25 stack frames</div>
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">org.example.GetInTouch:testLogin</h2>
+<h2 id="m3">org.example.AddToCart:testNewsletterFormSubmission</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">org.example.CorporateGiftPage:testLogin</h2>
+<h2 id="m4">org.example.CSRActivitiesPage:testLogin</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m5">org.example.AddToCart:testNewsletterFormSubmission</h2>
+<h2 id="m5">org.example.CorporateGiftPage:testLogin</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m6">org.example.CareerPage:testLogin</h2>
+<h2 id="m6">org.example.WishListProducts:testNewsletterFormSubmission</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m7">org.example.CSRActivitiesPage:testLogin</h2>
+<h2 id="m7">org.example.Login:testLogin</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m8">org.example.WishListProducts:testNewsletterFormSubmission</h2>
+<h2 id="m8">org.example.Newsletter:testNewsletterFormSubmission</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m9">org.example.SearchProducts:testNewsletterFormSubmission</h2>
+<h2 id="m9">org.example.CareerPage:testLogin</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>
